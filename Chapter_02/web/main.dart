@@ -1,6 +1,7 @@
 library recipe_book;
 
 import 'package:angular/angular.dart';
+import 'package:angular/angular_dynamic.dart';
 
 // Temporary, please follow https://github.com/angular/angular.dart/issues/476
 @MirrorsUsed(targets: const['recipe_book'], override: '*')
@@ -80,5 +81,7 @@ class MyAppModule extends Module {
 }
 
 void main() {
-  ngBootstrap(module: new MyAppModule());
+  dynamicApplication()
+    .addModule(new MyAppModule()..type(RecipeBookController))
+    .run();
 }
