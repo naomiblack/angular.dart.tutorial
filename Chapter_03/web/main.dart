@@ -19,7 +19,6 @@ class MyAppModule extends Module {
 
 void main() {
   dynamicApplication()
-  .addModule(new MyAppModule()..type(RecipeBookController))
-  .addModule(new MyAppModule()..type(RatingComponent))
+  .addModule(new MyAppModule())
   .run();
 }

@@ -82,6 +82,6 @@ class MyAppModule extends Module {
 
 void main() {
   dynamicApplication()
-    .addModule(new MyAppModule()..type(RecipeBookController))
+    .addModule(new MyAppModule())
     .run();
 }
